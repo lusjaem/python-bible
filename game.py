@@ -15,16 +15,29 @@ def print_board():
     print(row3)
     print()
     
-#checking
-#print_board()  
+# Player move function
+
+def player_move(symbol):
+
+    if symbol == "X":
+        number = 1
+    elif symbol == "O":
+        number =2
+        
+    print("Your turn Player {}.".format(number)) 
+   
+    choice = int(input("Enter your move (1-9) on num keyboard: "))
+    if board[choice - 1] == " ":
+        board[choice - 1] = "symbol"
+    else:
+        print()
+        print("That space is taken. Try again.") 
 
 #game loop
 
 while True:
     print_board()
-    choice = int(input("Enter your move (1-9) on num keyboard: "))
-    if board[choice - 1] == " ":
-        board[choice - 1] = "X"
-    else:
-        print()
-        print("That space is taken. Try again.") 
+    player_move("X")
+    print_board()
+    player_move("O")
+    
