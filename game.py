@@ -23,5 +23,8 @@ def print_board():
 while True:
     print_board()
     choice = int(input("Enter your move (1-9) on num keyboard: "))
-    board[choice - 1] = "X"    
-    
+    if board[choice - 1] == " ":
+        board[choice - 1] = "X"
+    else:
+        print()
+        print("That space is taken. Try again.") 
