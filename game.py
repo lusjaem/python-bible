@@ -31,7 +31,7 @@ def player_move(symbol):
         board[choice - 1] = symbol
     else:
         print()
-        print("That space is taken. Try again.") 
+        print("That space is taken.") 
 
 #game loop
 
