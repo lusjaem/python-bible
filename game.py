@@ -22,13 +22,13 @@ def player_move(symbol):
     if symbol == "X":
         number = 1
     elif symbol == "O":
-        number =2
+        number = 2
         
-    print("Your turn Player {}.".format(number)) 
+    print("Your turn Player {}.".format(number))
    
     choice = int(input("Enter your move (1-9) on num keyboard: "))
     if board[choice - 1] == " ":
-        board[choice - 1] = "symbol"
+        board[choice - 1] = symbol
     else:
         print()
         print("That space is taken. Try again.") 
