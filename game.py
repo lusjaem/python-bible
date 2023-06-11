@@ -48,6 +48,14 @@ def is_victory(symbol):
     else:
         return False
 
+# checking full space
+
+def is_full():
+    if " " not in board:
+        return True
+    else:
+        return False
+
 #game loop
 
 while True:
@@ -57,10 +65,16 @@ while True:
     if is_victory("X"):
         print("X wins! Congratulations!")
         break
+    elif is_full():
+        print("The board is full!")
+        break
 
     player_move("O")
     if is_victory("O"):
         print_board()
         print("O wins! Congratulations!")
+        break
+    elif is_full():
+        print("The board is full!")
         break
     
