@@ -32,6 +32,21 @@ def player_move(symbol):
     else:
         print()
         print("That space is taken.") 
+        
+# checking victory
+
+def is_victory(symbol):
+    if (board[0]==symbol and board[1]==symbol and board[2]==symbol) or\
+    (board[3]==symbol and board[4]==symbol and board[5]==symbol) or\
+    (board[6]==symbol and board[7]==symbol and board[8]==symbol) or\
+    (board[0]==symbol and board[3]==symbol and board[8]==symbol) or\
+    (board[1]==symbol and board[4]==symbol and board[7]==symbol) or\
+    (board[2]==symbol and board[5]==symbol and board[8]==symbol) or\
+    (board[0]==symbol and board[4]==symbol and board[8]==symbol) or\
+    (board[2]==symbol and board[4]==symbol and board[6]==symbol):
+        return True
+    else:
+        return False
 
 #game loop
 
@@ -39,5 +54,13 @@ while True:
     print_board()
     player_move("X")
     print_board()
+    if is_victory("X"):
+        print("X wins! Congratulations!")
+        break
+
     player_move("O")
+    if is_victory("O"):
+        print_board()
+        print("O wins! Congratulations!")
+        break
     
