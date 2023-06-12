@@ -1,6 +1,7 @@
 # python-bible
 
-Getting fun with Python3 basics.
+Getting fun with Python3 basics. 
+Exercises based on course of Ziyad Yehia (Udemy).
 
 Done:
 
