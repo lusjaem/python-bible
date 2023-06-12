@@ -11,10 +11,11 @@ Done:
 - String operations
 - Lists, Tuples, Disctionaries, Arrays
 - Loops (While, For)
+- OOP - basic concepts (inheritance, polymorphism)
 
 To do:
 
- - OOP
+ - OOP - advanced
  - Algorithms
  - AI
  - frameworks, extensions .NET
